@@ -8,7 +8,7 @@ class App extends React.Component{
         super()
     }
     render(){
-      console.log("from app",this.props)
+    //   console.log("from app",this.props)
         return(
             <div>
                  <Homee></Homee>
