@@ -1,7 +1,10 @@
+// import firebase from 'firebase'
 import firebase from '../../config/index'
+
+// import firebase from 'firebase'
 // const set_data = (data) =>{
 //     return (dispatch) =>{
-//         console.log(data)
+//         console.log(dta)
         
 //             dispatch({type:"SETDATA",data:data})
             
@@ -11,7 +14,7 @@ import firebase from '../../config/index'
 const logf = () => {
     return(dispatch) => {
         var provider =new firebase.auth.FacebookAuthProvider();
-        firebase.auth().signInwithPopup(provider)
+        firebase.auth().signInWithPopup(provider)
         .then(function(result){
             var token=result.credential.accessToken;
             var user=result.user;
