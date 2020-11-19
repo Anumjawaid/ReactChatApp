@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import { connect  }from 'react-redux'
-import {set_data} from '../store/actions/index'
+import {logf} from '../store/actions/index'
 
 class Homee extends React.Component{
     constructor(){
@@ -19,7 +19,8 @@ class Homee extends React.Component{
         return(
             <div>
                  <h1>Home of the chat App</h1>
-                  <button onClick={()=>this.props.set_data(user)}>SetData</button>
+                  <button onClick={()=>this.props.logf()}>Login</button>
+                  {/* <button onClick={()=>this.props.set_data(user)}>SetData</button> */}
             </div>
         )
     }
@@ -29,6 +30,7 @@ const mik = (state)=>({
         // name:'Abc'
 })
 const mid = (dispatch) =>({
-    set_data :(data)=>dispatch(set_data(data))
+    // set_data :(data)=>dispatch(set_data(data))
+    logf: ()=>dispatch(logf())
 })
 export default connect(mik,mid)(Homee);
