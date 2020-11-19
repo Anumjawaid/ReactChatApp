@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import  firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
 
@@ -12,9 +12,6 @@ var firebaseConfig = {
     appId: "1:301645684467:web:c21e2f30d555a996786186",
     measurementId: "G-8PY08KX9YQ"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
   
-  export default {
-      firebase
-  }
+  export default firebase;
