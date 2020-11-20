@@ -1,5 +1,6 @@
-// import firebase from 'firebase'
 import firebase from '../../config/index'
+import {useHistory }from 'react-router-dom'
+
 
 // import firebase from 'firebase'
 // const set_data = (data) =>{
@@ -11,7 +12,7 @@ import firebase from '../../config/index'
         
 //     }
 // }
-const logf = () => {
+const logf = (history) => {
     return(dispatch) => {
         var provider =new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithPopup(provider)
@@ -27,6 +28,8 @@ const logf = () => {
             firebase.database().ref('/').child(`users/${user.uid}`).set(create_user)
             .then(()=>{
                 alert("User login Successfully")
+                // useHistory().push('/chat')    this doesnot work
+                history.push('/chat')
             })
             console.log("user==>",create_user)
         }).catch(function(error){
