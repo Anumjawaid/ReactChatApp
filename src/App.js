@@ -1,6 +1,6 @@
-import Homee from './containers/Home';
 import './App.css';
 import React from 'react'
+import AppRouter from './config/router'
 import { connect } from 'react-redux';
 
 class App extends React.Component{
@@ -11,7 +11,7 @@ class App extends React.Component{
     //   console.log("from app",this.props)
         return(
             <div>
-                 <Homee></Homee>
+                 <AppRouter/>
             </div>
         )
     }
