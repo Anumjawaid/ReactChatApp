@@ -27,6 +27,7 @@ const logf = (history) => {
             }
             firebase.database().ref('/').child(`users/${user.uid}`).set(create_user)
             .then(()=>{
+                dispatch({type:'SETUSER',payload:create_user})
                 alert("User login Successfully")
                 // useHistory().push('/chat')    this doesnot work
                 history.push('/chat')
