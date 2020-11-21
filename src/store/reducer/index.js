@@ -1,14 +1,6 @@
 const INITIL_STATE={
-    users:[{
-        name:"Anum",
-        email:'anum45@.com'
-
-    },
-    {
-        name:"husn",
-        email:'husn45@.com'
-    }
-]
+    users:[],
+    current_user:{}
 }
 export default (state=INITIL_STATE,action)=>{
     console.log("action",action)
@@ -17,6 +9,11 @@ export default (state=INITIL_STATE,action)=>{
             return({
                 ...state,
                 users:[...state.users,action.data]
+            })
+        case 'SETUSER':
+            return({
+                ...state,
+                current_user:action.payload
             })
         default:
             return state    
