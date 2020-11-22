@@ -41,7 +41,18 @@ const logf = (history) => {
 
 
     }
+
+}
+// ***************************************************
+const get_users = ()=>{
+    return(dispatch)=>{
+        let users=[]
+        firebase.database().ref('/').child('users').on('child_added',(date)=>{
+            console.log("firebase data=>",date.val())
+            users.push(date.val())
+            dispatch({type:'SETFIREBASEDATABASE',payload:users})
+        })
+    }
 }
 
-
-export {logf }
+export {logf,get_users }

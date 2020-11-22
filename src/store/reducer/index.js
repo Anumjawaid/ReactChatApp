@@ -15,6 +15,11 @@ export default (state=INITIL_STATE,action)=>{
                 ...state,
                 current_user:action.payload
             })
+        case 'SETFIREBASEDATABASE':
+                return({
+                    ...state,
+                    users:action.payload
+                })
         default:
             return state    
     }

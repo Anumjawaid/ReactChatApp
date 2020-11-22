@@ -1,0 +1,12 @@
+.chatcont{
+    display: flex;
+    flex-direction: row;
+    justify-content:10px;
+}
+.chat{
+    background-color: pink;
+    
+}
+.chattext{
+    background-color: blue;
+}
