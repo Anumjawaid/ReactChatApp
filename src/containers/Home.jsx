@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import { connect  }from 'react-redux'
 import {logf} from '../store/actions/index'
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class Homee extends React.Component{
     constructor(){
@@ -17,9 +18,10 @@ class Homee extends React.Component{
         let user={name:"Umair",email:'umai892hk@com'}
         console.log("Propsss",this.props)
         return(
-            <div>
+            <div className='homemain'>
+                {/* <FontAwesomeIcon icon="coffee" /> */}
                  <h1>Home of the chat App</h1>
-                  <button onClick={()=>this.props.logf(this.props.history)}>Login</button>
+                  <button onClick={()=>this.props.logf(this.props.history)} className='loginbtn'>Login</button>
                   {/* <button onClick={()=>this.props.set_data(user)}>SetData</button> */}
             </div>
         )
