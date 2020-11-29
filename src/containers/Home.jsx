@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import { connect  }from 'react-redux'
 import {logf} from '../store/actions/index'
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class Homee extends React.Component{
     constructor(){
@@ -19,7 +19,8 @@ class Homee extends React.Component{
         console.log("Propsss",this.props)
         return(
             <div className='homemain'>
-                {/* <FontAwesomeIcon icon="coffee" /> */}
+                <FontAwesomeIcon icon="coffee" />
+                <FontAwesomeIcon icon={['fab', 'apple']}style={{fontSize:'30px'}} />
                  <h1>Home of the chat App</h1>
                   <button onClick={()=>this.props.logf(this.props.history)} className='loginbtn'>Login</button>
                   {/* <button onClick={()=>this.props.set_data(user)}>SetData</button> */}
